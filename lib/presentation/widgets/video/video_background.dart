@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
 
 class VideoBackground extends StatelessWidget {
-  const VideoBackground({super.key});
+  final List<Color> colors;
+  final List<double> stops;
+
+  const VideoBackground({
+    super.key,
+    this.colors = const [
+      Colors.transparent,
+      Colors.black87,
+    ],
+    this.stops = const [0.0, 0.5],
+  }) : assert(colors.length == stops.length,
+            'colors and stops must have the same length');
 
   @override
   Widget build(BuildContext context) {
     return Positioned.fill(
       child: DecoratedBox(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                transform: GradientRotation(0.5),
-                colors: [Colors.transparent, Colors.black])),
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: colors,
+              stops: stops),
+        ),
       ),
     );
   }

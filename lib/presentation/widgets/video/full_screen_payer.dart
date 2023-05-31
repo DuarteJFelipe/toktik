@@ -53,7 +53,7 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
                     child: Stack(children: [
                       VideoPlayer(_controller),
                       // Gradient
-                      VideoBackground(),
+                      VideoBackground(stops: const [0.8, 1.0]),
                       // Caption
                       Positioned(
                         bottom: 60,
