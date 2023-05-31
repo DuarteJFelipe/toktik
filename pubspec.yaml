@@ -7,8 +7,10 @@ environment:
   sdk: '>=2.19.6 <3.0.0'
 
 dependencies:
+  animate_do: ^3.0.2
   flutter:
     sdk: flutter
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +19,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/videos/
