@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
           title: 'TokTik',
           home: Scaffold(
             appBar: AppBar(
-              title: const Text('Tok Tik'),
+              title: Row(
+                children: const [Text('Tok Tik '), Icon(Icons.music_note)],
+              ),
             ),
             body: const DiscoverScreen(),
           )),

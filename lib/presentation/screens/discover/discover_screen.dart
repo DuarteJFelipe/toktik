@@ -11,7 +11,7 @@ class DiscoverScreen extends StatelessWidget {
     final discoverProvider = context.watch<DiscoverProvider>();
 
     return Scaffold(
-        body: discoverProvider == true
+        body: discoverProvider == false
             ? Center(child: CircularProgressIndicator())
             : VideoScrollableView(videos: discoverProvider.videos));
   }
